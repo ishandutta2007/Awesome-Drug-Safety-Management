@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Drug-Safety-Management/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Drug-Safety-Management?style=social" alt="GitHub stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Drug-Safety-Management/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Drug-Safety-Management?style=social" alt="GitHub_Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Drug-Safety-Management/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Drug-Safety-Management?style=social" alt="GitHub forks"/></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
@@ -61,7 +61,7 @@ This repository tracks notable **SaaS platforms** and **open-source software** f
 
 The following active open-source projects provide statistical models, adverse event reporting systems, and AI workflows for drug safety.
 
-*Sorted by GitHub Star Count (Descending)* ⭐
+*Sorted by GitHub Stars_Count (Descending)* ⭐
 
 - **[openFDA Pharmacovigilance Tools](https://github.com/topics/openfda)** [<img src="https://img.shields.io/github/stars/fda/openfda?style=social&color=white" alt="openFDA Stars"/>](https://github.com/fda/openfda/stargazers) ⭐  
   Official FDA open data initiatives and community analytical toolkits leveraging the openFDA API for real-time adverse event analysis, FAERS querying, and hybrid RAG biomedical intelligence.
@@ -99,7 +99,7 @@ The following active open-source projects provide statistical models, adverse ev
 
 1. **Fork** the repository 🍴
 2. Add/edit entries in `README.md` following the standard table/markdown format.
-3. Ensure all links are active and facts (pricing, star counts, market size) are verified.
+3. Ensure all links are active and facts (pricing, Stars_Counts, market size) are verified.
 4. Submit a **Pull Request** with a brief summary of additions 🚀
 
 ---
