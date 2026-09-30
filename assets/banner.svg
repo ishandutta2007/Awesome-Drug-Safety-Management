@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .bg { fill: url(#bg-grad); }
+    .grid-line { stroke: #334155; stroke-width: 0.5; stroke-dasharray: 4,4; opacity: 0.4; }
+    .pulse-wave { stroke: #38bdf8; stroke-width: 2; fill: none; opacity: 0.6; }
+    .pulse-wave-2 { stroke: #f43f5e; stroke-width: 2; fill: none; opacity: 0.5; }
+    .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 800; font-size: 48px; fill: url(#text-grad); text-anchor: middle; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 500; font-size: 20px; fill: #94a3b8; text-anchor: middle; }
+    .badge-text { font-family: monospace; font-size: 14px; fill: #38bdf8; }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.4; }
+      50% { transform: scale(1.05); opacity: 0.8; }
+      100% { transform: scale(1); opacity: 0.4; }
+    }
+    @keyframes float-particle {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    .animated-pulse { animation: pulse 4s ease-in-out infinite; transform-origin: center; }
+    .particle { animation: float-particle 3s ease-in-out infinite; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="300" rx="16" class="bg" />
+
+  <!-- Dynamic Background Grid & Waves (Behind Text) -->
+  <g opacity="0.3">
+    <line x1="0" y1="50" x2="1200" y2="50" class="grid-line"/>
+    <line x1="0" y1="100" x2="1200" y2="100" class="grid-line"/>
+    <line x1="0" y1="150" x2="1200" y2="150" class="grid-line"/>
+    <line x1="0" y1="200" x2="1200" y2="200" class="grid-line"/>
+    <line x1="0" y1="250" x2="1200" y2="250" class="grid-line"/>
+  </g>
+
+  <!-- Animated ECG / Signal Lines (Background layer) -->
+  <path class="pulse-wave animated-pulse" d="M 50,220 Q 150,220 200,220 T 250,180 T 270,260 T 290,140 T 310,230 T 350,220 L 550,220 Q 650,220 700,220 T 750,190 T 770,250 T 790,150 T 810,230 T 850,220 L 1150,220" />
+  <path class="pulse-wave-2 animated-pulse" d="M 50,80 L 350,80 T 390,50 T 410,120 T 430,40 T 450,90 L 850,80 T 890,60 T 910,110 T 930,50 L 1150,80" />
+
+  <!-- Floating Tech Glowing Nodes -->
+  <circle cx="290" cy="140" r="4" fill="#38bdf8" class="particle" filter="url(#glow)"/>
+  <circle cx="790" cy="150" r="4" fill="#38bdf8" class="particle" filter="url(#glow)"/>
+  <circle cx="430" cy="40" r="4" fill="#f43f5e" class="particle" filter="url(#glow)"/>
+
+  <!-- Foreground Title and Subtitle -->
+  <g transform="translate(600, 135)">
+    <!-- Pill Container for Icon/Category -->
+    <rect x="-140" y="-85" width="280" height="32" rx="16" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="0" y="-64" class="badge-text" text-anchor="middle">⚡ PHARMACOVIGILANCE &amp; SAFETY</text>
+    
+    <!-- Title -->
+    <text x="0" y="5" class="title" filter="url(#glow)">Awesome Drug Safety Management</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="45" class="subtitle">Curated SaaS Platforms &amp; Open-Source Projects for Adverse Event Reporting &amp; Signal Detection</text>
+  </g>
+
+  <!-- Bottom Accent Line -->
+  <rect x="200" y="275" width="800" height="3" rx="1.5" fill="url(#text-grad)" opacity="0.8"/>
+</svg>
